@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NetProbe — Network Engineer Toolkit for Windows</title>
+<meta name="description" content="NetProbe is a modern network diagnostics toolkit for IT professionals. Ping, traceroute, subnet scanner, port checker, and more. 7-day free trial.">
+<meta name="keywords" content="network scanner, ping tool, traceroute, subnet calculator, IT tools, network engineer">
+
+<!-- Google Analytics - replace G-XXXXXXXXXX with your ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-19B6PKVB9T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-19B6PKVB9T');
+</script>
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: #24273a;
+  color: #cad3f5;
+  line-height: 1.6;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+header {
+  padding: 20px 0;
+  border-bottom: 1px solid #363a4f;
+}
+.nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 24px; font-weight: bold; color: #8aadf4; }
+.nav-links a {
+  color: #cad3f5;
+  text-decoration: none;
+  margin-left: 30px;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: #8aadf4; }
+
+/* Hero */
+.hero {
+  padding: 100px 0;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 56px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: 700;
+}
+.hero .subtitle {
+  font-size: 22px;
+  color: #a5adcb;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn {
+  display: inline-block;
+  padding: 16px 40px;
+  background: #8aadf4;
+  color: #24273a;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: transform 0.2s;
+  margin: 10px;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-secondary {
+  background: transparent;
+  color: #8aadf4;
+  border: 2px solid #8aadf4;
+}
+.trial-badge {
+  display: inline-block;
+  background: #a6da95;
+  color: #24273a;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Features */
+.features {
+  padding: 80px 0;
+  background: #1e2030;
+}
+.features h2 {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 60px;
+  color: #ffffff;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.feature {
+  background: #363a4f;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #494d64;
+  transition: transform 0.3s;
+}
+.feature:hover { transform: translateY(-5px); }
+.feature-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+.feature h3 {
+  color: #8aadf4;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.feature p {
+  color: #a5adcb;
+  font-size: 15px;
+}
+
+/* Tools List */
+.tools {
+  padding: 80px 0;
+}
+.tools h2 {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.tools .subtitle {
+  text-align: center;
+  color: #a5adcb;
+  margin-bottom: 50px;
+  font-size: 18px;
+}
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.tool-item {
+  background: #363a4f;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border-left: 3px solid #8aadf4;
+}
+
+/* CTA */
+.cta {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #363a4f, #1e2030);
+  text-align: center;
+}
+.cta h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.cta p {
+  color: #a5adcb;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+/* Footer */
+footer {
+  padding: 40px 0;
+  border-top: 1px solid #363a4f;
+  text-align: center;
+  color: #6e738d;
+}
+footer a {
+  color: #8aadf4;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 36px; }
+  .hero .subtitle { font-size: 18px; }
+  .nav-links a { margin-left: 15px; font-size: 14px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav class="nav">
+      <div class="logo">🔍 NetProbe</div>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#tools">Tools</a>
+        <a href="https://netprobesupport.github.io/netprobe-privacy/">Privacy</a>
+        <a href="#download">Download</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="trial-badge">✨ 7-Day Free Trial</div>
+    <h1>The Network Toolkit<br>Built for IT Pros</h1>
+    <p class="subtitle">
+      15+ powerful network diagnostic tools in one beautiful app.
+      Ping, traceroute, subnet scanner, port checker, DNS lookup, and more.
+    </p>
+    <a href="https://apps.microsoft.com/detail/9NQN8N06DVBZ" class="btn">
+      Get It on Microsoft Store
+    </a>
+    <a href="#features" class="btn btn-secondary">Learn More</a>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <div class="container">
+    <h2>Why NetProbe?</h2>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <h3>Lightning Fast</h3>
+        <p>Scan entire subnets in seconds with multi-threaded discovery.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🎨</div>
+        <h3>Beautiful UI</h3>
+        <p>8 carefully crafted color themes. No more 1990s interfaces.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🛠️</div>
+        <h3>15+ Tools in One</h3>
+        <p>Stop juggling apps. Every tool a network engineer needs.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔒</div>
+        <h3>Privacy First</h3>
+        <p>Works completely offline. No data collection, no cloud required.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📊</div>
+        <h3>Professional Exports</h3>
+        <p>Export scan results to CSV or TXT for reports and documentation.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔔</div>
+        <h3>Smart Alerts</h3>
+        <p>Continuous monitoring with up/down notifications for critical hosts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tools" id="tools">
+  <div class="container">
+    <h2>Everything You Need</h2>
+    <p class="subtitle">Powerful tools for every network task</p>
+    <div class="tools-grid">
+      <div class="tool-item">🎯 Subnet Scanner</div>
+      <div class="tool-item">📡 Ping Tool</div>
+      <div class="tool-item">🛤️ Traceroute</div>
+      <div class="tool-item">🌐 DNS Lookup</div>
+      <div class="tool-item">🔍 Whois</div>
+      <div class="tool-item">🚪 Port Checker</div>
+      <div class="tool-item">🧮 Subnet Calculator</div>
+      <div class="tool-item">📋 ARP Table</div>
+      <div class="tool-item">📦 DNS Bulk Lookup</div>
+      <div class="tool-item">⚡ Wake-on-LAN</div>
+      <div class="tool-item">📊 Network Info</div>
+      <div class="tool-item">📈 Continuous Monitor</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="download">
+  <div class="container">
+    <h2>Ready to Get Started?</h2>
+    <p>Try NetProbe free for 7 days. No credit card required.</p>
+    <a href="https://apps.microsoft.com/detail/9NQN8N06DVBZ" class="btn">
+      Download from Microsoft Store
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>
+      <a href="https://netprobesupport.github.io/netprobe-privacy/">Privacy Policy</a>
+      <a href="mailto:suppnetprobe@outlook.com">Contact</a>
+      <a href="https://github.com/NetProbeSupport">GitHub</a>
+    </p>
+    <p style="margin-top: 20px;">© 2026 NetProbe.</p>
+  </div>
+</footer>
+
+</body>
+</html>
